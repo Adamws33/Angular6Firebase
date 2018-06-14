@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  nameToDisplay = 'Bob Belcher';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  login() {
+    this.nameToDisplay = window.prompt('Enter your name');
+  }
+  logout() {
+    this.nameToDisplay = '';
   }
 
 }

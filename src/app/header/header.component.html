@@ -18,9 +18,9 @@
  ​
       <!-- Right side of navbar -->
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-lg btn-outline-primary">Register</button>
-        <button type="button" class="btn btn-lg btn-outline-primary">Login</button>
-        <button type="button" class="btn btn-lg btn-outline-danger red-btn">Logout</button>
+        <button *ngIf="!nameToDisplay" type="button" class="btn btn-lg btn-outline-primary" routerLink="/register">Register</button>
+        <button *ngIf="!nameToDisplay" type="button" class="btn btn-lg btn-outline-primary" (click)="login()">Login</button>
+        <button *ngIf="nameToDisplay" type="button" class="btn btn-lg btn-outline-danger red-btn" (click)="logout()">Logout of {{nameToDisplay}}</button>
       </div>
  ​
     </nav>

@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="card text-white bg-dark">
+ ​
+    <div class="card-header">
+      <h3>Register for an account</h3>
+    </div>
+ ​
+    <div class="card-body">
+      <div class="card text-white bg-secondary mb-3">
+        <div class="card-body">
+ ​
+          <div class="form-group">
+            <label for="emailInput">Email:</label>
+            <input type="email" class="form-control form-control-lg" placeholder="name@website.com" id="emailInput" autofocus [(ngModel)]="newUserEmail" (keyup.enter)="registerUser()">
+          </div>
+          ​
+          <div class="form-group">
+            <label for="passwordInput">Password:</label>
+            <input type="password" class="form-control form-control-lg" placeholder="Password" id="passwordInput" [(ngModel)]="newUserPassword" (keyup.enter)="registerUser()">
+            <small class="form-text">*Password should be at least 6 characters long</small>
+          </div>
+          ​
+          <div class="form-group">
+            <label for="passwordConfirmInput">Confirm Password:</label>
+            <input type="password" class="form-control form-control-lg" placeholder="Confirm Password" id="passwordConfirmInput" [(ngModel)]="newUserPasswordConfirm" (keyup.enter)="registerUser()">
+          </div>
+        ​
+        </div>
+      </div>
+    </div>
+        ​
+    <div class="card-footer d-flex justify-content-end">
+      <button class="btn btn-primary btn-md" (click)="registerUser()">Submit</button>
+      <button class="btn btn-primary btn-md">Cancel</button>
+    </div>
+ ​
+  </div>
+</div>
