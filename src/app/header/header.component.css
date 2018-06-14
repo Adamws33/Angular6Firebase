@@ -1,0 +1,33 @@
+/* Remove rounded borders and make it the whole width of the page */
+.navbar {
+  width: 100%;
+  border-radius: 0px;
+}
+​
+/* Move the brand away from the edge of the page */
+.navbar-brand {
+  margin-left: 1rem;
+}
+​
+/* Set the text color of the links on the left side of the navbar */
+li:hover a {
+  color: #007bff !important;
+}
+​
+/* Style the Register, Login, and Logout buttons on the right side of the navbar */
+.btn {
+  border-radius: 0px;
+  border: 0;
+}
+.btn:hover,
+.btn:active,
+.btn:focus {
+  background-color: #007bff;
+  color: #343a40;
+}
+.red-btn:hover,
+.red-btn:active,
+.red-btn:focus {
+  background-color: #dc3545;
+  color: #343a40;
+}
