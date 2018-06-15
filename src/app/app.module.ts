@@ -14,6 +14,9 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './login/login.component';
+import { CreateComponent } from './create/create.component';
+import { AuthGuard } from './services/auth.guard';
+import { MessageService } from './services/message.service';
 
 const routes: Routes = [
   {
@@ -27,6 +30,11 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'create',
+    component: CreateComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '**', redirectTo: '/'
@@ -49,7 +57,8 @@ const firebaseConfig = {
     FooterComponent,
     HomeComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +70,9 @@ const firebaseConfig = {
     AngularFirestoreModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuard,
+    MessageService
   ],
   bootstrap: [AppComponent]
 })

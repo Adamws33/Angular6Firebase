@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card text-white bg-dark">
+    ​
+    <div class="card-header">
+      <h3>Create a new message</h3>
+    </div>
+    ​
+    <div class="card-body">
+      <div class="card text-white bg-secondary mb-3">
+        <div class="card-body">
+          ​
+          <div class="form-group">
+            <label for="titleInput">Title:</label>
+            <input class="form-control form-control-lg" placeholder="Title" id="titleInput" autofocus [(ngModel)]="newMessageTitle" (keyup.enter)="createMessage()">
+          </div>
+          ​
+          <div class="form-group">
+            <label for="contentInput">Content:</label>
+            <textarea class="form-control form-control-lg" rows="8" placeholder="Content" id="contentInput" [(ngModel)]="newMessageContent"></textarea>
+          </div>
+          ​
+        </div>
+      </div>
+    </div>
+    ​
+    <div class="card-footer d-flex justify-content-end">
+      <button class="btn btn-primary btn-md" (click)="createMessage()">Submit</button>
+      <button class="btn btn-primary btn-md">Cancel</button>
+    </div>
+    ​
+  </div>
+</div>

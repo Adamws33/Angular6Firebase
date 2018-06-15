@@ -4,21 +4,20 @@
   margin-top: 2rem;
 }
 ​
-/* Make each post take up less vertical space */
-.card-body {
-  padding: 0.25rem 1rem;
+/* Style the Submit and Cancel buttons */
+.card-footer {
+  margin-top: 2rem;
+  background-color: #6c757d;
 }
-.card-header {
-  margin-bottom: 1rem;
-}
-​
-/* Style the Edit and Delete buttons */
 .btn {
-  margin-right: 1rem;
-  background-color: #343a40;
   border: 0;
   font-weight: bold;
   letter-spacing: 0.75px;
+  color: white;
+  background-color: #343a40;
+}
+.btn:first-of-type {
+  margin-right: 1rem;
 }
 .btn:hover {
   color: #343a40;
