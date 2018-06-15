@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { CreateComponent } from './create/create.component';
 import { AuthGuard } from './services/auth.guard';
 import { MessageService } from './services/message.service';
+import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,11 @@ const routes: Routes = [
   {
     path: 'create',
     component: CreateComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'edit',
+    component: EditComponent,
     canActivate: [AuthGuard]
   },
   {
@@ -58,7 +64,8 @@ const firebaseConfig = {
     HomeComponent,
     RegisterComponent,
     LoginComponent,
-    CreateComponent
+    CreateComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
